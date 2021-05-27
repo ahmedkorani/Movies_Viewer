@@ -10,5 +10,5 @@ npm install
 npm start
 ```
 
-![Screenshot]([assets/ss_1.jpg](https://github.com/ahmedkorani/Movies_Viewer/blob/korani/readme/assets/ss_1.jpg))
-![Screenshot]([assets/ss_2.jpg](https://github.com/ahmedkorani/Movies_Viewer/blob/korani/readme/assets/ss_2.jpg))
+![Screenshot](https://raw.githubusercontent.com/ahmedkorani/Movies_Viewer/korani/readme/assets/ss_1.jpg)
+![Screenshot](https://raw.githubusercontent.com/ahmedkorani/Movies_Viewer/korani/readme/assets/ss_2.jpg)
