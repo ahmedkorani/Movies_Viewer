@@ -55,12 +55,10 @@ export class MovieScrollView extends Component {
   fetchMovies = async () => {
     const { page, seed } = this.state;
     this.setState({ loading: true });
-    // try {
     let response = await fetchMovieData(page);
     response = response.results;
     this.setState({
       data: page === 1 ? response : this.state.data.concat(response),
-      // error: results.error || null,
       loading: false,
       refreshing: false,
     });
@@ -75,10 +73,6 @@ export class MovieScrollView extends Component {
         this.fetchMovies();
       }
     );
-    // if (!this.onEndReachedCalledDuringMomentum) {
-
-    //   this.onEndReachedCalledDuringMomentum = true;
-    // }
   };
 
   render() {
