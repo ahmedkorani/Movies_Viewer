@@ -38,13 +38,12 @@ export class MovieScrollView extends Component {
       return (
         <View style={{ padding: 50, width: "100%", height: "40%" }}>
           <Button
-          onPress={this.handleLoadMore}
-          title="Load More"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
+            onPress={this.handleLoadMore}
+            title="Load More"
+            color="#841584"
+            accessibilityLabel="Learn more about this purple button"
+          />
         </View>
-        
       );
     }
   }
@@ -67,19 +66,6 @@ export class MovieScrollView extends Component {
     });
   };
 
-  handleRefresh = () => {
-    this.setState(
-      {
-        page: 1,
-        seed: this.state.seed + 1,
-        refreshing: true,
-      },
-      () => {
-        this.fetchMovies();
-      }
-    );
-  };
-
   handleLoadMore = () => {
     this.setState(
       {
@@ -95,49 +81,10 @@ export class MovieScrollView extends Component {
     // }
   };
 
-  // renderSeparator = () => {
-  //   return (
-  //     <View
-  //       style={{
-  //         height: 20,
-  //         width: "86%",
-  //         backgroundColor: "#CED0CE",
-  //         marginLeft: "14%",
-  //       }}
-  //     />
-  //   );
-  // };
-
-  // renderFooter = () => {
-  //   if (!this.state.loading) return null;
-
-  //   return (
-  //     <View
-  //       style={{
-  //         paddingVertical: 20,
-  //         borderTopWidth: 1,
-  //         borderColor: "#CED0CE",
-  //       }}
-  //     >
-  //       <ActivityIndicator animating size="large" />
-  //     </View>
-  //   );
-  // };
-
   render() {
     return (
       <FlatList
         data={this.state.data}
-        // keyExtractor={(item) => item.email}
-        // ListFooterComponent={this.renderFooter}
-        // onRefresh={this.handleRefresh}
-        // refreshing={this.state.refreshing}
-        // onEndReached={this.handleLoadMore}
-        // onEndReached={this.onEndReached.bind(this)}
-        // onEndReachedThreshold={0.1}
-        // onMomentumScrollBegin={() => { this.state.onEndReachedCalledDuringMomentum = false; }}
-        // onEndReached={({ distanceFromEnd }) => { console.log('on end reached ', distanceFromEnd); }}
-        // onEndReachedThreshold={2}
         ListFooterComponent={this.renderButton()}
         renderItem={({ item }) => (
           <View
@@ -147,7 +94,6 @@ export class MovieScrollView extends Component {
               style={{
                 backgroundColor: "#eee",
                 borderRadius: 10,
-                // overflow: 'fit',
                 flexDirection: "row",
                 flexWrap: "wrap",
               }}
